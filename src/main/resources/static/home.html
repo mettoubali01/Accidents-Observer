@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Accident Location</title>
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet'/>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            h1{
+                display: block;
+            }
+
+            .container{
+                width: 50%;
+                margin: auto;
+            }
+            #map {
+                position: absolute;
+                width: 100%;
+            }
+            .marker {
+                background-image: url('/image/pink-marker.png');
+                background-size: cover;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            .mapboxgl-popup {
+                max-width: 200px;
+            }
+
+            .mapboxgl-popup-content {
+                text-align: center;
+                font-family: 'Open Sans', sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+
+    <div class="container">
+        <h1>Mentions Location of <b>Accidente</b> or <b>Accident</b> keywords in the Map</h1>
+        <p>This map shows location of people tweets who talking about any accident.</p>
+        <div id='map' style="height: 900px; width: 900px"></div>
+    </div>
+
+    <script src="js/mapbox.js"></script>
+    </body>
+</html>
